@@ -1,9 +1,9 @@
 const imageContainer = document.querySelector('.image-container');
 const loader = document.querySelector('.loader');
 
-let count = 10;
+let imageCount = 10;
 const apiKey= '4QNnh16-plUsonlvppr3rKt-ylqRjAv2jEv-_qybfAM';
-let unsplshURL = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}&topics=Architecture,People`;
+let unsplshURL = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${imageCount}&topics=Architecture,People`;
 
 let photosArray = [];
 let imagesLoaded = 0;
@@ -17,7 +17,7 @@ const imageLoaded = ()=>{
   if(imagesLoaded === totalImages){
     ready = true;
     loader.hidden = true;
-    count = 30;
+    imageCount = 30;
   }
 }
 
